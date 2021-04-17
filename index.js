@@ -3,7 +3,7 @@ import WebView from "react-native-webview";
 import { SafeAreaView } from "react-native";
 
 const PowerBi = (props) => {
-  let configuration = this.setConfiguration(props);
+  let configuration = setConfiguration(props);
 
   merge = (target, source) => {
     for (const key of Object.keys(source)) {
