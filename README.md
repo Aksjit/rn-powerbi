@@ -1,12 +1,12 @@
-Power Bi for React Native
+**Power Bi for React Native**
 
 This component opens PowerBI reports. It uses the WebView on Android and iOS to display them.
 
-Installation
+**Installation**
 
 $ npm install --save rn-powerbi
 
-Usage
+**Usage**
 
 import PowerBi from 'rn-powerbi';
 
@@ -19,8 +19,8 @@ For a report to display you need at least five parts: AccessToken, Embed URL and
 />
 
 
-Authors
-AKsjit
+**Authors**
+Aksjit
 
 
 
