@@ -19,7 +19,7 @@ For a report to display you need at least five parts: AccessToken, Embed URL and
 />
 
 
-**Authors**
+**Author**
 Aksjit
 
 
