@@ -1,10 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import WebView from "react-native-webview";
 import { SafeAreaView } from "react-native";
 
 const PowerBi = (props) => {
-  let configuration = setConfiguration(props);
-
   merge = (target, source) => {
     for (const key of Object.keys(source)) {
       if (source[key] instanceof Object)
@@ -44,7 +42,7 @@ const PowerBi = (props) => {
 
     return JSON.stringify(embedConfiguration);
   };
-
+  let configuration = setConfiguration(props);
   getTemplate = (configuration) => `<!doctype html>
     <html>
     <head>
@@ -80,12 +78,12 @@ const PowerBi = (props) => {
     </html>`;
 
   const html = this.getTemplate(configuration);
-  const { webViewStyle, containerStyle } = props;
+  const { webviewStyle, containerStyle } = props;
   return (
     <SafeAreaView style={containerStyle}>
       <WebView
         source={{ html: html }}
-        style={webViewStyle}
+        style={webviewStyle}
         injectedJavaScript={`const meta = document.createElement('meta'); meta.setAttribute('content', 'width=device-width, initial-scale=0.5, maximum-scale=0.5, user-scalable=0'); meta.setAttribute('name', 'viewport'); document.getElementsByTagName('head')[0].appendChild(meta); `}
         scalesPageToFit={false}
       />
